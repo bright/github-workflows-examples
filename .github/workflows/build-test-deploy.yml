@@ -7,7 +7,7 @@ jobs:
   compile:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'compile'
+      - run: echo 'Compile'
         name: "Compile"
   test:
     runs-on: ubuntu-latest
