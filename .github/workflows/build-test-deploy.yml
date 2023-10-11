@@ -23,6 +23,7 @@
       steps:
         - run: echo 'Build'
           name: "Test"
+
     deploy-staging:
       runs-on: ubuntu-latest
       environment: staging
@@ -32,6 +33,7 @@
       steps:
         - run: echo 'Deploy to staging'
           name: "Deploy to staging"
+
     deploy-production:
       runs-on: ubuntu-latest
       environment: staging
