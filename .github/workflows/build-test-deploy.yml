@@ -36,7 +36,7 @@ jobs:
 
   deploy-production:
     runs-on: ubuntu-latest
-    environment: staging
+    environment: production
     needs:
       - deploy-staging
     steps:
