@@ -5,4 +5,4 @@ on:
 name: Build, Test, Deploy (reused)
 jobs:
   build-test-deploy:
-    uses: .github/workflow/build-test-deploy-reusable.yml
+    uses: ./.github/workflow/build-test-deploy-reusable.yml
