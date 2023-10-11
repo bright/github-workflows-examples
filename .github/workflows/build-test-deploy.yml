@@ -40,5 +40,5 @@ jobs:
     needs:
       - deploy-staging
     steps:
-      - run: echo 'Deploy to production'
+      - run: echo 'Deploy to production ‼️'
         name: "Deploy to production"
