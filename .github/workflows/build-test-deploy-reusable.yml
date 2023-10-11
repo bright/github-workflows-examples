@@ -12,15 +12,15 @@ jobs:
     needs:
       - compile
     steps:
-      - run: echo 'Build'
+      - run: echo 'Test'
         name: "Test"
   lint:
     runs-on: ubuntu-latest
     needs:
       - compile
     steps:
-      - run: echo 'Build'
-        name: "Test"
+      - run: echo 'Lint'
+        name: "Lint"
 
   deploy-staging:
     runs-on: ubuntu-latest
