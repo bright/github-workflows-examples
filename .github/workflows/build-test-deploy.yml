@@ -25,6 +25,7 @@
           name: "Test"
     deploy-staging:
       runs-on: ubuntu-latest
+      environment: staging
       needs:
         - lint
         - test
@@ -33,6 +34,7 @@
           name: "Deploy to staging"
     deploy-production:
       runs-on: ubuntu-latest
+      environment: staging
       needs:
         - deploy-staging
       steps:
