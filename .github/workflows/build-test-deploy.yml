@@ -7,7 +7,7 @@ jobs:
   compmile-test-lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: bright/github-workflows-examples/.github/actions/compile-test-lint
+      - uses: bright/github-workflows-examples/.github/actions/compile-test-lint@main
         with:
           before-test-action: actions/setup-node@v3
   deploy-staging:
