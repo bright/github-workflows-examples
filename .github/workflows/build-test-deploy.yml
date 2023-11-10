@@ -4,26 +4,12 @@ on:
       - main
 name: Build, Test, Deploy
 jobs:
-  compile:
+  compmile-test-lint:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'Compile'
-        name: "Compile"
-  test:
-    runs-on: ubuntu-latest
-    needs:
-      - compile
-    steps:
-      - run: echo 'Test'
-        name: "Test"
-  lint:
-    runs-on: ubuntu-latest
-    needs:
-      - compile
-    steps:
-      - run: echo 'Lint'
-        name: "Lint"
-
+      - uses: bright/github-workflows-examples/.github/actions/compile-test-lint
+        with:
+          before-test-action: actions/setup-node@v3
   deploy-staging:
     runs-on: ubuntu-latest
     environment: staging
