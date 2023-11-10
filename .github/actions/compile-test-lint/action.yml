@@ -9,7 +9,7 @@ runs:
     - name: "Compile"
       run: echo 'Compile'
       shell: bash
-    - uses: ${{ input.before-test-action }}
+    - uses: ${{ inputs.before-test-action }}
       name: "Before test"
     - run: echo 'Test'
       name: "Test"
