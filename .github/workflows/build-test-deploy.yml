@@ -4,7 +4,7 @@ on:
       - main
 name: Build, Test, Deploy
 jobs:
-  compmile-test-lint:
+  compile-test-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: bright/github-workflows-examples/.github/actions/compile-test-lint@main
@@ -14,8 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: staging
     needs:
-      - lint
-      - test
+      - compile-test-lint
     steps:
       - run: echo 'Deploy to staging'
         name: "Deploy to staging"
