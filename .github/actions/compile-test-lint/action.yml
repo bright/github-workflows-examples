@@ -1,0 +1,19 @@
+name: compile-test-lint
+description: "Will it work"
+inputs:
+  before-test-action:
+    description: 'Actions to run before test'
+runs:
+  using: "composite"
+  steps:
+    - name: "Compile"
+      run: echo 'Compile'
+      shell: bash
+    - uses: ${{ input.before-test-action }}
+      name: "Before test"
+    - run: echo 'Test'
+      name: "Test"
+      shell: bash
+    - run: echo 'Lint'
+      name: "Lint"
+      shell: bash
